@@ -543,14 +543,19 @@ footer span{color:#E08A38;}
 
 <!-- ── SCRIPTS ── -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Build email from data attributes (bypasses Cloudflare)
-document.querySelectorAll('.email-reveal').forEach(function(el) {
-  var u = el.getAttribute('data-user');
-  var d = el.getAttribute('data-domain');
-  var full = u + '@' + d;
-  el.href = 'mai' + 'lto:' + full;
-  el.querySelector('.email-display').textContent = full;
-});
+// Copy email to clipboard
+function copyEmail() {
+  var p1 = 'catherine';
+  var p2 = 'ajavar';
+  var p3 = 'gmail';
+  var p4 = 'com';
+  var email = p1 + p2 + String.fromCharCode(64) + p3 + '.' + p4;
+  navigator.clipboard.writeText(email).then(function() {
+    var btn = document.getElementById('emailBtn');
+    btn.textContent = '✅ Email Copied!';
+    setTimeout(function() { btn.textContent = 'Click to Copy Email'; }, 3000);
+  });
+}
 
 // Scroll progress
 const bar = document.getElementById('progressBar');
