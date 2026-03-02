@@ -504,10 +504,11 @@ footer span{color:#E08A38;}
         <h3>Let's Start the Conversation</h3>
         <p>Send me a message and I'll get back to you within 24 hours. I'm open to freelance projects, part-time retainers, and long-term remote positions.</p>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#422123362a27302b2c2723282334233002252f232b2e6c212d2f" class="contact-link">
+          
+          <div class="contact-link" style="cursor:pointer;" onclick="(function(){var s='pngurevarwnine@tznvy.pbz';var r=s.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});window.location.href='mailto:'+r;})()">
             <div class="contact-link-icon">✉️</div>
-            <span><span class="__cf_email__" data-cfemail="e78486938f82958e8982868d86918695a7808a868e8bc984888a">[email&#160;protected]</span></span>
-          </a>
+            <span>Send me an Email</span>
+          </div>
           <a href="https://linkedin.com/in/catherine-javar" target="_blank" class="contact-link">
             <div class="contact-link-icon">💼</div>
             <span>linkedin.com/in/catherine-javar</span>
@@ -542,20 +543,8 @@ footer span{color:#E08A38;}
 </footer>
 
 <!-- ── SCRIPTS ── -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Copy email to clipboard
-function copyEmail() {
-  var p1 = 'catherine';
-  var p2 = 'ajavar';
-  var p3 = 'gmail';
-  var p4 = 'com';
-  var email = p1 + p2 + String.fromCharCode(64) + p3 + '.' + p4;
-  navigator.clipboard.writeText(email).then(function() {
-    var btn = document.getElementById('emailBtn');
-    btn.textContent = '✅ Email Copied!';
-    setTimeout(function() { btn.textContent = 'Click to Copy Email'; }, 3000);
-  });
-}
+<script>
+
 
 // Scroll progress
 const bar = document.getElementById('progressBar');
